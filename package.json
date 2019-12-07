@@ -11,9 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "@types/jest": "^24.0.23",
+    "chance": "^1.1.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "mongoose": "^5.7.14",
+    "supertest": "^4.0.2"
   }
 }
