@@ -14,7 +14,7 @@ data().then(splitLines => {
         let i = 0;
         console.log(randomArray)
         let arrayOfPairs = [];
-        while(i <= number){
+        while(i < number){
             if(i % 2 === 0){
                 arrayOfPairs[i] = [name1, randomArray[i]]
             }
