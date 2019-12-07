@@ -2,7 +2,7 @@ require('dotenv').config();
 require('./connect')();
 const chance = require('chance').Chance()
 const Model = require('./models/Model');
-const 
+const linePairConstructor = require('./lineConstructor');
 
 Model.create({
     numberOfLines : 10,
@@ -10,4 +10,5 @@ Model.create({
     name2 : chance.name(),
     lineArray : 
 })
+
 

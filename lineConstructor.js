@@ -6,6 +6,7 @@ const number = Math.floor(Math.random() * 20);
 name1 = chance.name();
 name2 = chance.name();
 
+const lineConstructor = () => {
 data().then(splitLines => {
         const newLines = splitLines;
         const newArray = [...Array(number)].map (() => newLines[Math.floor(Math.random() * 2000)]);
@@ -25,3 +26,6 @@ data().then(splitLines => {
         }
     return arrayOfPairs;
 }).then(arrayOfPairs => console.log(arrayOfPairs));
+};
+lineConstructor()
+module.exports = lineConstructor;
