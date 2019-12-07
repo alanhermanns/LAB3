@@ -13,12 +13,15 @@ data().then(splitLines => {
     }).then(randomArray => {
         let i = 0;
         console.log(randomArray)
-        let arrayOfPairs = randomArray.reduce((acc, curr) => {
-        if(i % 2 === 0){
-            acc[i] = [name1, curr]
+        let arrayOfPairs = [];
+        while(i <= number){
+            if(i % 2 === 0){
+                arrayOfPairs[i] = [name1, randomArray[i]]
+            }
+            if(i % 2 !== 0){
+                arrayOfPairs[i] = [name2, randomArray[i]]
+            }
+            i++;
         }
-        else if(i % 2 !== 0) {acc[i] = [name2, curr]}
-        i++;
-    }, [])
     return arrayOfPairs;
 }).then(arrayOfPairs => console.log(arrayOfPairs));
