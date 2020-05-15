@@ -2,11 +2,11 @@
 
 const { data } = require('./app')
 const chance = require('chance').Chance();
-const number = Math.floor(Math.random() * 20);
-name1 = chance.name();
-name2 = chance.name();
 
 const lineConstructor = () => {
+    const number = Math.floor(Math.random() * 20);
+    name1 = chance.name();
+    name2 = chance.name();
 data().then(splitLines => {
         const newLines = splitLines;
         const newArray = [...Array(number)].map (() => newLines[Math.floor(Math.random() * 2000)]);
@@ -24,7 +24,7 @@ data().then(splitLines => {
             }
             i++;
         }
-    return arrayOfPairs;
+    return { arrayOfPairs, number, name1, name2 }
 }).then(arrayOfPairs => console.log(arrayOfPairs));
 };
 lineConstructor()
